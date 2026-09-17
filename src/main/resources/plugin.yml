@@ -1,0 +1,17 @@
+name: ServerPassword
+version: '1.0.0'
+main: com.patta.serverpassword.ServerPasswordPlugin
+api-version: '1.20'
+author: KaFulnwza007
+authors: [KaFulnwza007]
+website: 'https://discord.com/users/435412527548203028'
+description: Minecraft Server Gatekeeper Password Plugin developed by KaFulnwza007 (KaFuCraft)
+commands:
+  serverpass:
+    description: คำสั่งจัดการระบบรหัสผ่านเซิร์ฟเวอร์
+    usage: /serverpass [reload|set|submit|gui|reset|resetall|list]
+    aliases: [serverpassword, pass]
+permissions:
+  serverpassword.admin:
+    description: สิทธิ์สำหรับผู้ดูแลระบบในการตั้งค่ารหัสผ่านและรีโหลด
+    default: op
