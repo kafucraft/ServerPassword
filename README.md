@@ -18,7 +18,10 @@
 
 <p align="center">
   <a href="https://discord.com/users/435412527548203028">
-    <img src="https://img.shields.io/badge/Discord-kafu__craft%20(435412527548203028)-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Profile">
+    <img src="https://img.shields.io/badge/Discord-kafu__craft-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Profile">
+  </a>
+  <a href="https://www.youtube.com/@Kafu_Craft">
+    <img src="https://img.shields.io/badge/YouTube-KaFu%20Craft-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Channel">
   </a>
 </p>
 
@@ -90,8 +93,8 @@ timeout-seconds: 60
 ## 👨‍💻 ผู้พัฒนา (Developer)
 
 * **Lead Developer:** **KaFulnwza007** (KaFuCraft)
-* **Discord:** `kafu_craft` (User ID: `435412527548203028`)
-* **YouTube:** [Kafu Craft](https://www.youtube.com)
+* **Discord:** [kafu_craft](https://discord.com/users/435412527548203028)
+* **YouTube:** [KaFu Craft - YouTube](https://www.youtube.com/@Kafu_Craft)
 
 ---
 
