@@ -1,103 +1,117 @@
 <p align="center">
-  <img src="assets/logo.png" width="340" alt="ServerPassword Logo">
+  <img src="assets/logo.png" width="320" alt="ServerPassword Logo">
 </p>
 
-<h1 align="center">🔐 ServerPassword (Prassword Server)</h1>
+<h1 align="center">ServerPassword</h1>
 
 <p align="center">
-  <strong>ปลั๊กอินระบบรหัสผ่านกลางป้องกันเซิร์ฟเวอร์ Minecraft ที่ออกแบบมาเพื่อสตรีมเมอร์และคอมมูนิตี้</strong><br>
+  <strong>ระบบรหัสผ่านกลางสำหรับปกป้องเซิร์ฟเวอร์ Minecraft</strong><br>
+  ออกแบบเพื่อความปลอดภัย ความเรียบง่าย และเป็นมิตรต่อสตรีมเมอร์<br>
   รองรับทั้ง <b>Java Edition</b> และ <b>Bedrock Edition (Geyser / Floodgate)</b>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Minecraft-1.17--1.21+-brightgreen.svg?style=for-the-badge" alt="Minecraft Version">
-  <img src="https://img.shields.io/badge/Server-Paper%20%7C%20Purpur%20%7C%20Spigot-orange.svg?style=for-the-badge" alt="Server Platform">
-  <img src="https://img.shields.io/badge/Bedrock-GeyserMC%20Ready-0078D7.svg?style=for-the-badge" alt="Bedrock Supported">
-  <img src="https://img.shields.io/badge/License-MIT-purple.svg?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/Minecraft-1.17--1.21+-2ea44f.svg?style=flat-square" alt="Minecraft Version">
+  <img src="https://img.shields.io/badge/Server-Paper%20%7C%20Purpur%20%7C%20Spigot-f38b3c.svg?style=flat-square" alt="Server Platform">
+  <img src="https://img.shields.io/badge/Bedrock-GeyserMC%20Ready-0969da.svg?style=flat-square" alt="Bedrock Supported">
+  <img src="https://img.shields.io/badge/License-MIT-8250df.svg?style=flat-square" alt="License">
 </p>
 
 <p align="center">
   <a href="https://discord.com/users/435412527548203028">
-    <img src="https://img.shields.io/badge/Discord-kafu__craft-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord Profile">
+    <img src="https://img.shields.io/badge/Discord-kafu__craft-5865F2?style=flat-square&logo=discord&logoColor=white" alt="Discord">
   </a>
   <a href="https://www.youtube.com/@Kafu_Craft">
-    <img src="https://img.shields.io/badge/YouTube-KaFu%20Craft-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Channel">
+    <img src="https://img.shields.io/badge/YouTube-KaFu%20Craft-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="YouTube">
   </a>
 </p>
 
 ---
 
-## 🌟 จุดเด่นที่ไม่เหมือนใคร (Why ServerPassword?)
+## 📖 ภาพรวม (Overview)
 
-ในเซิร์ฟเวอร์ทั่วไป เมื่อสตรีมเมอร์ไลฟ์สด ผู้ชมมักจะเห็นรหัสผ่านจากการพิมพ์ที่มุมจอหรือการคลิก UI **ServerPassword** ถูกพัฒนาขึ้นเพื่อแก้ปัญหานี้โดยเฉพาะ:
-
-* ⚡ **Remember Player (ใส่ครั้งเดียวจบ):** ผู้เล่นหรือสตรีมเมอร์ใส่รหัสผ่านครั้งแรกเพียงครั้งเดียว (ทำนอกสตรีม) ระบบจะจำ UUID ถาวร ครั้งต่อไปเวลาเปิดสตรีมสดเข้าเล่น จะเข้าเซิร์ฟเวอร์ได้ทันที 100% **ไม่มีกล่องข้อความ ไม่มีคำเตือน และไม่มีอะไรขึ้นหน้าจอเลย!**
-* 🤫 **Zero-Leak Protection (ไม่มีรหัสหลุด):** เมื่อพิมพ์รหัสในแชต ข้อความจะไม่ถูกส่งออกสู่สาธารณะ และระบบจะล้างหน้าจอแชต (Auto Clear Chat) ทันทีหลังส่ง
-* 📱 **Full Bedrock & Java Crossplay:** รองรับทั้งผู้เล่นคอมพิวเตอร์และมือถือผ่าน GeyserMC
-* 🔒 **ระบบล็อกตัวผู้เล่น (Anti-Bypass Freeze):** ป้องกันการเดิน, กระโดด, ทุบ/วางบล็อก, และป้องกันดาเมจ 100% จนกว่าจะยืนยันรหัสถูกต้อง
-* ⏱️ **ระบบรักษาความปลอดภัย:** เตะอัตโนมัติเมื่อใส่ผิดเกินจำนวนครั้ง หรือปล่อยทิ้งไว้หมดเวลา
+**ServerPassword** คือปลั๊กอินควบคุมการเข้าถึงเซิร์ฟเวอร์ Minecraft ด้วยรหัสผ่านกลาง (Master Password) ผู้เล่นทุกคนต้องยืนยันรหัสผ่านที่ถูกต้องก่อนเข้าสู่โลกเกม โดยมีระบบ **Remember Player** ที่ช่วยจดจำผู้เล่นที่ผ่านการยืนยันแล้ว ทำให้เข้าเล่นในครั้งถัดไปได้ทันทีโดยไม่ต้องกรอกรหัสซ้ำ ป้องกันปัญหารหัสผ่านรั่วไหลระหว่างการถ่ายทอดสด (Live Stream) ได้อย่างสมบูรณ์แบบ
 
 ---
 
-## 📦 วิธีติดตั้ง (Installation)
+## ✨ คุณสมบัติเด่น (Features)
+
+* 🛡️ **Master Password:** กำหนดรหัสผ่านประจำเซิร์ฟเวอร์ความยาว 1-8 ตัวอักษรหรือตัวเลขผ่าน `config.yml` หรือคำสั่งในเกม
+* ⚡ **Remember Player:** จดจำผู้เล่นที่ยืนยันรหัสผ่านแล้วถาวรผ่าน UUID ไม่ต้องกรอกรหัสซ้ำในครั้งถัดไป
+* 🤫 **Zero-Leak Protection:** ดักจับข้อความรหัสผ่านในแชตไม่ให้แสดงสู่สาธารณะ พร้อมระบบล้างหน้าจอแชตอัตโนมัติทันทีหลังส่ง
+* 📱 **Crossplay Compatibility:** ใช้งานได้สมบูรณ์ทั้ง Java Edition และ Bedrock Edition (ผ่าน GeyserMC)
+* 🔒 **Anti-Bypass Restriction:** ระงับการเคลื่อนที่, การกระโดด, การโต้ตอบกับบล็อก/ไอเทม และป้องกันความเสียหายทุกรูปแบบระหว่างรอการยืนยัน
+* ⏱️ **Security Safeguards:** ระบบเตะผู้เล่นอัตโนมัติเมื่อกรอกรหัสผิดเกินจำนวนครั้ง หรือหมดเวลาที่กำหนด
+
+---
+
+## 📦 การติดตั้ง (Installation)
 
 1. ดาวน์โหลดไฟล์ [ServerPassword-1.0.0.jar](ServerPassword-1.0.0.jar)
-2. นำไฟล์ไปวางในโฟลเดอร์ `plugins/` ของเซิร์ฟเวอร์คุณ (Paper / Purpur / Spigot 1.17 - 1.21+)
+2. นำไฟล์ไปวางในโฟลเดอร์ `plugins/` ของเซิร์ฟเวอร์ (รองรับ Paper / Purpur / Spigot 1.17 - 1.21+)
 3. เริ่มต้นหรือรีสตาร์ตเซิร์ฟเวอร์
-4. แก้ไขรหัสผ่านได้ที่ `plugins/ServerPassword/config.yml` (ค่าเริ่มต้น: `12345678`)
+4. กำหนดรหัสผ่านในไฟล์ `plugins/ServerPassword/config.yml` (ค่าเริ่มต้น: `12345678`)
 
 ---
 
-## 🎮 คำสั่งและการใช้งาน (Commands & Permissions)
+## 🎮 คำสั่งและสิทธิ์การใช้งาน (Commands & Permissions)
 
-| คำสั่ง (Command) | คำอธิบาย (Description) | สิทธิ์ (Permission) |
-| :--- | :--- | :--- |
-| พิมพ์รหัสในช่องแชตโดยตรง | ใส่รหัสผ่านเข้าเซิร์ฟเวอร์ (สำหรับผู้เล่นใหม่) | ทุกคน |
-| `/serverpass submit <รหัส>` | ส่งรหัสผ่านผ่านคำสั่งสำรอง (หรือ `/pass <รหัส>`) | ทุกคน |
-| `/serverpass gui` | เปิดหน้าต่างตู้เซฟ Keypad PIN Pad | ทุกคน |
-| `/serverpass set <รหัสใหม่>` | เปลี่ยนรหัสผ่านเซิร์ฟเวอร์ (และรีเซ็ตทุกคนให้ใส่ใหม่) | `serverpassword.admin` (OP) |
-| `/serverpass reset <ชื่อผู้เล่น>` | บังคับให้ผู้เล่นคนนั้นต้องใส่รหัสผ่านใหม่อีกครั้ง | `serverpassword.admin` (OP) |
-| `/serverpass resetall` | บังคับให้ผู้เล่นทุกคนต้องใส่รหัสผ่านใหม่อีกครั้ง | `serverpassword.admin` (OP) |
-| `/serverpass list` | ตรวจสอบจำนวนผู้เล่นที่ผ่านการยืนยันแล้ว | `serverpassword.admin` (OP) |
-| `/serverpass reload` | รีโหลดการตั้งค่าทั้งหมดจาก `config.yml` | `serverpassword.admin` (OP) |
+### สำหรับผู้เล่นทั่วไป
+| คำสั่ง | คำอธิบาย |
+| :--- | :--- |
+| พิมพ์รหัสในช่องแชต | ยืนยันรหัสผ่านเพื่อเข้าสู่เซิร์ฟเวอร์ |
+| `/serverpass submit <รหัส>` | คำสั่งสำรองสำหรับส่งรหัสผ่าน (หรือ `/pass <รหัส>`) |
+| `/serverpass gui` | เปิดเมนูตู้เซฟ PIN Pad (กรณีต้องการกดปุ่ม) |
+
+### สำหรับผู้ดูแลระบบ (Permission: `serverpassword.admin`)
+| คำสั่ง | คำอธิบาย |
+| :--- | :--- |
+| `/serverpass set <รหัส>` | เปลี่ยนรหัสผ่านเซิร์ฟเวอร์ใหม่ (ระบบจะรีเซ็ตให้ทุกคนยืนยันใหม่) |
+| `/serverpass reset <ชื่อผู้เล่น>` | สั่งให้ผู้เล่นที่ระบุต้องยืนยันรหัสผ่านใหม่อีกครั้ง |
+| `/serverpass resetall` | สั่งให้ผู้เล่นทุกคนต้องยืนยันรหัสผ่านใหม่อีกครั้ง |
+| `/serverpass list` | แสดงจำนวนผู้เล่นที่ผ่านการยืนยันรหัสผ่านแล้ว |
+| `/serverpass reload` | โหลดการตั้งค่าจาก `config.yml` ใหม่ทันที |
 
 ---
 
-## ⚙️ ตัวอย่างการตั้งค่า (`config.yml`)
+## ⚙️ การตั้งค่า (`config.yml`)
 
 ```yaml
 # รหัสผ่านเซิร์ฟเวอร์ (1-8 ตัวอักษรหรือตัวเลข)
 server-password: "12345678"
 
-# ระบบจดจำผู้เล่น (ใส่ครั้งเดียว ครั้งถัดไปไม่ต้องใส่เลย)
+# ระบบจดจำผู้เล่น (ยืนยันครั้งเดียว ไม่ต้องกรอกซ้ำ)
 remember-player:
   enabled: true
-  reset-on-password-change: true # รีเซ็ตทุกคนเมื่อแอดมินเปลี่ยนรหัสผ่าน
+  reset-on-password-change: true # รีเซ็ตสถานะทุกคนเมื่อมีการเปลี่ยนรหัสผ่าน
 
-# รูปแบบการใส่รหัส: "CHAT" หรือ "GUI"
+# รูปแบบการกรอกรหัส: "CHAT" หรือ "GUI"
 input-mode: "CHAT"
 
-# การตั้งค่าความเนียนสำหรับสตรีมเมอร์
+# การตั้งค่าความปลอดภัยและความเป็นส่วนตัว
 stealth:
-  clear-chat-on-submit: true  # ล้างแชตทันทีหลังกดส่ง
-  blindness: false             # false = จอสว่างปกติ ไม่มืดดำ
-  freeze: true                 # ล็อกตัวไม่ให้เดินก่อนใส่รหัส
-  prompt-type: "ACTIONBAR"     # "ACTIONBAR" (ข้อความเล็กๆ เหนือหลอดเลือด)
+  clear-chat-on-submit: true  # ล้างหน้าจอแชตทันทีหลังกดส่ง
+  blindness: false             # ปิดหน้าจอมืดเพื่อให้ภาพในการสตรีมคมชัดปกติ
+  freeze: true                 # ล็อกตำแหน่งผู้เล่นก่อนยืนยันรหัส
+  prompt-type: "ACTIONBAR"     # การแจ้งเตือน ("ACTIONBAR", "TITLE", "CHAT", "NONE")
 
+# จำนวนครั้งที่อนุญาตให้กรอกผิดก่อนเตะออกจากเซิร์ฟเวอร์
 max-attempts: 3
+
+# ระยะเวลาที่กำหนดให้กรอกรหัส (วินาที)
 timeout-seconds: 60
 ```
 
 ---
 
-## 👨‍💻 ผู้พัฒนา (Developer)
+## 👨‍💻 ข้อมูลผู้พัฒนา (Developer)
 
-* **Lead Developer:** **KaFulnwza007** (KaFuCraft)
+* **ผู้พัฒนา:** **KaFulnwza007** (KaFuCraft)
 * **Discord:** [kafu_craft](https://discord.com/users/435412527548203028)
-* **YouTube:** [KaFu Craft - YouTube](https://www.youtube.com/@Kafu_Craft)
+* **YouTube:** [KaFu Craft](https://www.youtube.com/@Kafu_Craft)
 
 ---
 
-## 📄 ลิขสิทธิ์ (License)
+## 📄 สัญญาอนุญาต (License)
 
-โปรเจกต์นี้เผยแพร่ภายใต้สัญญาอนุญาต [MIT License](LICENSE) - สามารถนำไปใช้งาน ปรับแต่ง และพัฒนาต่อได้อย่างอิสระโดยคงเครดิตผู้พัฒนาเดิม
+ซอฟต์แวร์นี้เผยแพร่ภายใต้สัญญาอนุญาต [MIT License](LICENSE)
